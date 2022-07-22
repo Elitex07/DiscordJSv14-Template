@@ -3,10 +3,7 @@ require('dotenv').config();
 const fs = require('fs');
 const OS = require('os');
 const Events = require('events');
-const express = require('express');
 require('colors');
-const app = express();
-const port = 2323;
 
 // Initialzing Client
 const client = new Client({
@@ -42,32 +39,6 @@ const client = new Client({
         activities: [{name: `raiden.help | v4.4`, type: 0}],
         status: "idle"
     }
-});
-
-// Website Management
-const path = require('path')
-app.use('/static', express.static(path.join(__dirname, 'Website')))
-app.use(express.static(`${__dirname}/Website`))
-
-app.get('/home', (req, res) => {
-    res.sendFile('./Website/home.html', {root: __dirname});
-});
-
-app.get('/', (req, res)=>{
-    res.redirect('/home')
-})
-
-app.get('/invite', (req, res)=>{
-    res.sendFile('./Website/invite.html', {root: __dirname});
-});
-
-app.get('/support', (req, res)=>{
-    res.sendFile('./Website/support.html', {root: __dirname});
-});
-
-
-app.listen(port, () => {
-    console.log(`Successfully Conencted to Webpage.`)
 });
 
 // Increasing Event Listener Size
