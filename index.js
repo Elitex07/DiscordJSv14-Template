@@ -70,27 +70,22 @@ client.events = new Collection();
 
 // Crash - Prevention
 process.on('unhandledRejection', (err, cause) => {
-    //client.channels.cache.get('962134370225909830')?.send(`Unhandled Rejection : ${reason}`)
-    //console.log(`Unhandled Rejection at:`, promise);
     let errorembeed = new EmbedBuilder()
-    .setTitle(`<:PepeWhatTheFUCK:962736329408512050> Error Caught!`)
+    .setTitle(`Error Caught!`)
     .setDescription(`\`\`\`js\n${err}\`\`\``)
     .setColor('Random')
-    client.fetchWebhook('999537836917280878','_M1i_8iPKEKuGLw4E2900WIal3tfZQTm6JB_4MZhBA9ensbGhtKa1JA3IVgdSsTbGkaZ')
+    client.fetchWebhook('id','token')
     .then(a => a.send({embeds: [errorembeed]}));
 
     console.log(`[Uncaught Exception]: ${err}`.bold.brightGreen);
-    console.log(cause);
 });
 
 process.on('uncaughtException', err => {
-    //client.channels.cache.get('962134370225909830')?.send(`Unhandled Rejection : ${reason}`)
-    //console.log(`Unhandled Rejection at:`, promise);
     let errorembeed = new EmbedBuilder()
-    .setTitle(`<:PepeWhatTheFUCK:962736329408512050> Exception Caught!`)
+    .setTitle(`Exception Caught!`)
     .setDescription(`\`\`\`js\n${err}\`\`\``)
     .setColor('Random')
-    client.fetchWebhook('999537836917280878','_M1i_8iPKEKuGLw4E2900WIal3tfZQTm6JB_4MZhBA9ensbGhtKa1JA3IVgdSsTbGkaZ')
+    client.fetchWebhook('id','token')
     .then(a => a.send({embeds:[errorembeed]}));
 
     console.log(`[Uncaught Exception] ${err.message}`.bold.brightGreen)
