@@ -33,7 +33,7 @@ module.exports = (client) => {
     console.log(`[Slash Command Handler] ${a} Menu Commands Loaded Successfully`.yellow)
     if(e>0) console.log(`[Slash Command Handler] ${e} Command(s) are not Loaded`.red);
     client.on("ready",async ()=> {
-        client.guilds.cache.get('962130133383270491')?.commands.set(slash)
+        client.guilds.cache.get('guild-id')?.commands.set(slash)
         await client.application.commands.set(slash)
     });
 };
