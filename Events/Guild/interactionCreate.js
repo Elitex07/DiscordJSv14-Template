@@ -6,7 +6,7 @@ client.on('interactionCreate', async interaction => {
         const command = client.context.get(interaction.commandName);
         if (command) command.execute(client, interaction);
         else{
-            interaction.reply({ content: "Deprecated Slash Command" });
+            interaction.reply({ content: "Deprecated Menu Command" });
             await client.application.commands.delete(cmd);
         }
         return
