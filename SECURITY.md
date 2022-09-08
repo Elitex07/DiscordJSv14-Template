@@ -8,4 +8,4 @@
 
 ## Reporting a Vulnerability
 
-Join one of the Support Servers and ask for help.
+Join one of the Support Servers and report them to me. :)
