@@ -6,9 +6,9 @@ let e = 0;
 module.exports = (client) => {
     console.log(`=-=-=-=-=-=-=-=-= WELCOME TO ADVANCED EVENTS HANDLER =-=-=-=-=-=-=-=-=`.green)
     readdirSync("./Events/").forEach(dir => {
-        const events = readdirSync(`./events/${dir}/`).filter(file => file.endsWith(".js"))
+        const events = readdirSync(`./Events/${dir}/`).filter(file => file.endsWith(".js"))
         for(let file of events) {
-            let pull = require(`../../events/${dir}/${file}`);
+            let pull = require(`../../Events/${dir}/${file}`);
             if(pull.name){
                 client.events.set(pull.name, pull);
                 e++
