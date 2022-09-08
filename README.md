@@ -1,6 +1,21 @@
 # DiscordJSv14-Template
 It is a simple template to get started with your Discord Bot with Discord.js Library
 
+## Configuration
+- Create a file named `.env`.
+- Enter the following details to it:
+```
+token="YOUR TOKEN"
+mongo="MONGO DB URI [Only required for commands which requires some data to store]"
+```
+- Save the file. Open Terminal in the Project Directory.
+- Run:
+```
+npm i
+node index.js
+```
+- You are done.
+
 ## Support
 Join one of these Discord Servers, to get support:
 
