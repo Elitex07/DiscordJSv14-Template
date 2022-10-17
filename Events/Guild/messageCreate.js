@@ -1,6 +1,6 @@
 //--==--==--==--==--==--==--==
 // PREFIX
-const Prefix = '!'
+const Prefix = '+'
 //--==--==--==--==--==--==--==
 const client = require('../../index.js');
 const {EmbedBuilder,Collection, PermissionsBitField } = require(`discord.js`);

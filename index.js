@@ -36,7 +36,7 @@ const client = new Client({
         Partials.User
     ],
     presence: {
-        activities: [{name: `with You`, type: 0}],
+        activities: [{name: `Rezx. v2`, type: 0}],
         status: "online" //online/idle/dnd
     }
 });
@@ -70,26 +70,10 @@ client.events = new Collection();
 
 // Crash - Prevention
 process.on('unhandledRejection', (err, cause) => {
-    let errorembeed = new EmbedBuilder()
-    .setTitle(`Error Caught!`)
-    .setDescription(`\`\`\`js\n${err}\`\`\``)
-    .setColor('Random')
-    client.fetchWebhook('id','token')
-    .catch((e) => console.log(`[Crash Prevention] Webook ID and TOKEN is not provided.`))
-    .then(a => a.send({embeds: [errorembeed]}));
-
     console.log(`[Uncaught Exception]: ${err}`.bold.brightGreen);
 });
 
 process.on('uncaughtException', err => {
-    let errorembeed = new EmbedBuilder()
-    .setTitle(`Exception Caught!`)
-    .setDescription(`\`\`\`js\n${err}\`\`\``)
-    .setColor('Random')
-    client.fetchWebhook('id','token')
-    .catch((e) => console.log(`[Crash Prevention] Webook ID and TOKEN is not provided.`))
-    .then(a => a.send({embeds:[errorembeed]}));
-
     console.log(`[Uncaught Exception] ${err.message}`.bold.brightGreen)
 });
 

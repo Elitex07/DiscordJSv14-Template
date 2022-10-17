@@ -8,7 +8,7 @@ async function connect() {
     mongoose.connect(process.env.mongo, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-    });
+    }).catch(e => console.log('No Database added'));
 
     mongoose.connection.once("open", () => {
         console.log('[DATABASE] Connected To Database')
