@@ -36,7 +36,7 @@ const client = new Client({
         Partials.User
     ],
     presence: {
-        activities: [{name: `Rezx. v2`, type: 0}],
+        activities: [{name: `Raiden Bot`, type: 0}],
         status: "online" //online/idle/dnd
     }
 });
