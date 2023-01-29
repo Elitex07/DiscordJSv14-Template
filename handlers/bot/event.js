@@ -7,7 +7,7 @@ module.exports = (client) => {
         for(let file of events) {
             let pull = require(`../../Events/${dir}/${file}`);
             if(pull.name){
-                client.events.set(pull.name, pull);
+                client.events++;
                 e++
             } else {
                 client.events++
