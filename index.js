@@ -61,7 +61,7 @@ client.commands = new Collection();
 client.aliases = new Collection();
 client.categories = fs.readdirSync("./Commands/");
 client.context = new Collection();
-client.events = new Collection();
+client.events = 0;
 
 //connecting handlers
 ["command", "event","slash"].forEach(handler => {

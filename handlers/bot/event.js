@@ -1,8 +1,5 @@
 const {readdirSync} = require('fs');
-const colors = require('colors');
-let a = 0;
-let e = 0;
-
+const e = 0;
 module.exports = (client) => {
     console.log(`=-=-=-=-=-=-=-=-= WELCOME TO ADVANCED EVENTS HANDLER =-=-=-=-=-=-=-=-=`.green)
     readdirSync("./Events/").forEach(dir => {
@@ -13,7 +10,7 @@ module.exports = (client) => {
                 client.events.set(pull.name, pull);
                 e++
             } else {
-                a++
+                client.events++
                 continue;
             }
         }
