@@ -1,5 +1,6 @@
 const {readdirSync} = require('fs');
 const e = 0;
+
 module.exports = (client) => {
     console.log(`=-=-=-=-=-=-=-=-= WELCOME TO ADVANCED EVENTS HANDLER =-=-=-=-=-=-=-=-=`.green)
     readdirSync("./Events/").forEach(dir => {
@@ -15,6 +16,6 @@ module.exports = (client) => {
             }
         }
     })
-    console.log(`[Event Handler] ${a} Events Loaded Successfully`.yellow);
+    console.log(`[Event Handler] ${client.events} Events Loaded Successfully`.yellow);
     if(e>0) console.log(`[Event Handler] ${e} Event(s) are not Loaded`.red);
 }
