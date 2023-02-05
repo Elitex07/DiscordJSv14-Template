@@ -28,15 +28,11 @@ const client = new Client({
     ],
     partials: [
         Partials.Channel,
-        Partials.Message,
-        Partials.GuildMember,
-        Partials.GuildScheduledEvent,
         Partials.Reaction,
-        Partials.ThreadMember,
         Partials.User
     ],
     presence: {
-        activities: [{name: `Raiden Bot`, type: 0}],
+        activities: [{name: `Djs Template`, type: 0}],
         status: "online" //online/idle/dnd
     }
 });
