@@ -10,7 +10,7 @@ module.exports = {
         message.reply({embeds:[new EmbedBuilder()
             .setTitle(`:stopwatch: WS Ping : \`${client.ws.ping} MS\`
 
-:hourglass: Latency : \`${Date.now() - message.createdTimestamp - 50} MS\`
+:hourglass: Latency : \`${Date.now() - message.createdTimestamp} MS\`
 
 :gear: Uptime : ${ms(client.uptime)}`)
             .setColor(3092790)], content: `**:ping_pong: Pong!**`})
