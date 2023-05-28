@@ -4,6 +4,7 @@
   "description": "A multipurpose discord bot",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js"
     "test": "node index.js"
   },
   "author": "Elitex",
